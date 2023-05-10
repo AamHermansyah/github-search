@@ -5,5 +5,5 @@ export const getFullDate = (date: Date) => {
     day: 'numeric',
   }).format(date);
 
-  return result;
+  return result.replace(/(\w+)\s(\d+),\s(\d+)/gi, '$2 $1 $3');;
 };
